@@ -11,5 +11,22 @@
     <!-- imported CSS are concatenated and added automatically -->
   </head>
   <body aurelia-app="main">
+    <script>
+      webix.ready(function(){
+        webix.ui({
+          view:"form",
+          id:'log_form',
+          width:300,
+          elements:[
+            { view:"text", id:"user", label:"Username"},
+            { view:"text", type:"password", label:"Password"},
+            { margin:5, cols:[
+                { view:"button", click:"testLogin", value:"Login"}
+              ]}
+          ]
+        });
+
+      });
+    </script>
   </body>
 </html>
